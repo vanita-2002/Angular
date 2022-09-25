@@ -1,0 +1,23 @@
+<app-product-details [ productDisplay]="selectedProduct"></app-product-details>
+<h1>Product Data</h1>
+<!-- <app-employee *ngIf="selectedEmployee" [ee]= "selectedEmployee" ></app-employee> -->
+<table>
+    <thead>
+        <th>ProductId</th>
+        <th>name</th>
+        <th>category</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>Product Details</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of products ">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.category}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.quantity}}</td>
+            <td><button (click)="product(i)">View Details</button></td>
+        </tr>
+    </tbody>
+</table>

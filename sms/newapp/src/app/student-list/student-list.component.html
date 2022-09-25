@@ -1,0 +1,19 @@
+<div *ngIf="selectedStudent " [ ss ]="selectedStudent">{{selectedStudent.id}}</div><table>
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let student of students">
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.email}}</td>
+
+        <td>{{student.contact}}</td>
+<td (click)="viewDetails"></td>
+      </tr>
+    </tbody>
+  </table>
+

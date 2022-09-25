@@ -1,0 +1,13 @@
+Hello {{name}} rollno {{rollno}}
+<app-vini></app-vini>
+<app-vani></app-vani>
+<button (click)="clicked()">click me</button>
+<!-- attribute directives -->
+<div [ngClass]="isSpecial ?'special' : ''">This div is special</div>
+<div [ngClass]="{'my_Class' : 5>7, 'my_Class2' : 5<7,'my_Class3' : isSpecial}">MutiClass</div>
+<div [ngStyle]="{'font-style':true ? 'italic' : 'normal','font-weight':!(5>7) ? 'bold' : 'normal' ,'font-size' : isSpecial ? '24px' : '12px'}"  >Style Div</div>
+<div *ngIf ="inputname">This is only rendered when inputname is there : {{inputname}}</div>
+<div *ngFor = "let student of studentData"><p>{{student.id}}</p>
+  <p>{{student.first_name}}</p>
+  <p>{{student.last_name}}</p></div> 
+  <!-- student-list component -->
